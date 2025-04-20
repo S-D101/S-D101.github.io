@@ -1,69 +1,192 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
-
-/* 全体の基本スタイル */
-html, body {
-    height: 100%; /* ページ全体の高さを確保 */
-    margin: 0; /* 余白をなくす */
-    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォント */
-    text-align: center; /* テキストを中央揃え */
-    background: linear-gradient(135deg, #a2d2ff, #d0f4de); /* 水色系のグラデーション背景 */
-    color: #333; /* 文字の基本色 */
+*{
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-/* フレックスボックスでコンテンツを画面いっぱいに広げる */
-body {
+body{
+    font-family: "MSゴシック",sans-serif;
+    background:linear-gradient(135deg, #f0f8ff, #eaf6ff);
+    height: 100vh;
+}
+
+main{
+    padding-top: 5em;
+    max-width: 800px;
+    margin:0 auto;
+}
+
+.navi{
+    background:rgba(30, 30, 30, 0.95);
+    color: white;
     display: flex;
-    flex-direction: column; /* 縦方向のレイアウト */
+    width: 100vw;
+    height: 4em;
+    align-items: center;
+    position: fixed;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    top: 0;
+    padding: 0 1.5em
 }
 
-/* ヘッダー部分 */
-header {
-    background: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
-    color: white; /* 文字色を白に */
-    padding: 20px; /* 内側の余白 */
-    font-size: 24px; /* 文字の大きさ */
-}
 
-/* メインコンテンツ（中央揃え） */
-main {
-    flex: 1; /* 残りの空間をすべて埋める */
+nav{
     display: flex;
-    justify-content: center; /* 水平方向の中央揃え */
-    align-items: center; /* 垂直方向の中央揃え */
-    padding: 20px; /* 上下左右の余白 */
+    gap:1.5em;
 }
 
-/* プロフィールカードのデザイン */
-.profile {
-    background: white; /* 背景色を白に */
-    padding: 20px; /* 内側の余白 */
-    width: 80%; /* 横幅を80%に */
-    max-width: 400px; /* 最大幅を400pxに */
-    border-radius: 10px; /* 角を丸く */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 影をつけて立体感を出す */
-    text-align: left; /* テキストを左揃え */
+nav a{
+    line-height: 50px;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-/* プロフィール画像 */
-.profile img {
-    width: 100px; /* 幅100px */
-    height: 100px; /* 高さ100px */
-    border-radius: 50%; /* 円形に */
-    object-fit: cover; /* 画像を適切にトリミング */
-    margin-bottom: 10px; /* 画像下に余白 */
+a:hover{
+    color: #00bfff;
+    text-decoration: underline;
+    text-shadow: 0 0 5px #00bfff88;
 }
 
-/* セクションタイトル */
-h2 {
-    color: #0077b6; /* 水色系のアクセントカラー */
-    font-size: 20px; /* 文字サイズ */
-    margin-top: 15px; /* 上の余白 */
+.logo{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-right: auto;
+    font-family: 'Segoe UI', sans-serif;
+    color: #00bfff;
 }
 
-/* フッター（ページ最下部に固定） */
-footer {
-    background: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
-    color: white; /* 文字色を白に */
-    padding: 10px; /* 内側の余白 */
-    text-align: center; /* 中央揃え */
+#home{
+    padding: 5em 2em;
+    background:linear-gradient(135deg,#ffffff,#e0f7ff);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+    margin: 2em auto;
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+}
+
+#home h1{
+    font-size: 2.5em;
+    margin-top: 0.5em;
+    color: #333366;
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+#home p{
+    line-height: 1.6em;
+    color: #444;
+}
+
+#icon{
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+#icon:hover{
+    transform: scale(1.05);
+}
+
+#career{
+    display: flex;
+    flex-flow: column;
+}
+
+.career{
+    padding: 1em;
+    text-align: left;
+    margin-top: 2em auto;
+
+}
+
+.club{
+    padding: 1em;
+    text-align: left;
+    margin-bottom: 2em auto;
+}
+
+#career ul{
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+
+h2{
+    font-family: "Hiragino Maru Gothic Pro", sans-serif;
+    border-bottom: solid;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 2px #ccc;
+    color:#333388
+}
+
+.c{
+    color: black;
+    text-decoration: none;
+}
+
+#change-log{
+    padding: 1em;
+    text-align: left;
+    margin: 2em auto;
+}
+
+.log ul{
+    overflow-y: auto;
+    max-height: 9em;
+    list-style: none;
+    margin: 1em;
+    padding: 0;
+}
+
+.log li{
+    font-size: 0.95em;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.log .date {
+    font-weight: bold;
+    color: #555;
+    font-size: 0.9em;
+}
+  
+.log .lo{
+    font-size: 0.95em;
+    color: #333;
+    margin-top: 0.2em;
+}
+
+#e-link{
+    padding: 1em;
+    text-align: left;
+    margin: 2em auto;
+}
+
+#hobby{
+    padding: 1em;
+    text-align: left;
+    margin: 2em auto;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 0.5em;
+    }
+
+    nav a {
+        font-size: 0.8em;
+        padding: 0 0.3em;
+    }
+
+    .logo {
+        font-size: 1em;
+    }
 }
